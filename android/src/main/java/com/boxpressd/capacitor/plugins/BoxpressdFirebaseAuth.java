@@ -1,27 +1,19 @@
 package com.boxpressd.capacitor.plugins;
 
 import android.util.Log;
-
-import androidx.annotation.NonNull;
-
 import com.getcapacitor.CapConfig;
 import com.getcapacitor.JSObject;
+import com.getcapacitor.NativePlugin;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
-import com.getcapacitor.annotation.CapacitorPlugin;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.GetTokenResult;
 
-@CapacitorPlugin(name = "BoxpressdFirebaseAuth")
-public class BoxpressdFirebaseAuth extends Plugin {
-    public static final String CONFIG_KEY_PREFIX = "plugins.BoxpressdFirebaseAuth.";
+@NativePlugin(name = "FirebaseAuthTokenListener")
+public class FirebaseAuthTokenListener extends Plugin {
+    public static final String CONFIG_KEY_PREFIX = "plugins.FirebaseAuthTokenListener.";
     private static final String PLUGIN_TAG = "FirebaseAuthPlugin";
 
     private FirebaseAuth firebaseAuth;
