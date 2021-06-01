@@ -1,3 +1,9 @@
+declare module "@capacitor/core" {
+  interface PluginRegistry {
+    BoxpressdFirebaseAuth?: BoxpressdFirebaseAuthPlugin;
+  }
+}
+
 export interface BoxpressdFirebaseAuthPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  signOut(options: any): Promise<void>;
 }
